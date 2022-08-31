@@ -10,6 +10,7 @@ pub mod permutation;
 pub mod keccak_arith;
 // We build plain module for the purpose of reviewing the circuit
 pub mod plain;
+pub mod iszero;
 
 lazy_static::lazy_static! {
     pub static ref EMPTY_HASH: [u8; 32] = {

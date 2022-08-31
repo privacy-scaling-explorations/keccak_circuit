@@ -1,5 +1,4 @@
-use crate::common::State;
-use eth_types::Field;
+use crate::common::{State, Field};
 use halo2_proofs::circuit::AssignedCell;
 use itertools::Itertools;
 use num_bigint::BigUint;

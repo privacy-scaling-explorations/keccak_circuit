@@ -2,7 +2,7 @@
 #![allow(dead_code)]
 use super::BYTES_PER_WORD;
 use crate::permutation::tables::RangeCheckConfig;
-use eth_types::Field;
+use crate::common::Field;
 use halo2_proofs::{
     circuit::{AssignedCell, Layouter},
     plonk::{Advice, Column, ConstraintSystem, Error, Expression, Selector},

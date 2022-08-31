@@ -5,7 +5,7 @@ use crate::{
         tables::{Base13toBase9TableConfig, FromBase9TableConfig, StackableTable},
     },
 };
-use eth_types::Field;
+use crate::common::Field;
 use halo2_proofs::{
     circuit::{AssignedCell, Layouter},
     plonk::{Advice, Column, ConstraintSystem, Error, TableColumn},

@@ -2,7 +2,7 @@ use crate::arith_helpers::{convert_b13_coef, convert_b9_coef, f_from_radix_be, B
 use crate::common::LANE_SIZE;
 use crate::gate_helpers::{biguint_to_f, f_to_biguint};
 use crate::permutation::rho_helpers::{get_overflow_detector, BASE_NUM_OF_CHUNKS};
-use eth_types::Field;
+use crate::common::Field;
 use halo2_proofs::{
     circuit::{AssignedCell, Layouter, Table},
     plonk::{Advice, Column, ConstraintSystem, Error, Selector, TableColumn},

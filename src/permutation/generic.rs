@@ -1,4 +1,4 @@
-use eth_types::Field;
+use crate::common::Field;
 use halo2_proofs::{
     circuit::{AssignedCell, Layouter},
     plonk::{Advice, Column, ConstraintSystem, Error, Fixed, Selector},

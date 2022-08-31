@@ -1,4 +1,23 @@
 //! Types and constants of Keccak hash function. The constants can be found in the appendices of <https://keccak.team/keccak_specs_summary.html> or [pycryptodome](https://github.com/Legrandin/pycryptodome).
+use halo2_proofs::{
+    arithmetic::{Field as Halo2Field, FieldExt},
+    pairing::{
+        bn256::{Fq, Fr},
+        group::ff::PrimeField,
+    },
+};
+
+/// Trait used to reduce verbosity with the declaration of the [`FieldExt`]
+/// trait and its repr.
+pub trait Field: FieldExt + Halo2Field + PrimeField<Repr = [u8; 32]> {}
+
+// Impl custom `Field` trait for BN256 Fr to be used and consistent with the
+// rest of the workspace.
+impl Field for Fr {}
+
+// Impl custom `Field` trait for BN256 Frq to be used and consistent with the
+// rest of the workspace.
+impl Field for Fq {}
 
 /// The State is a 5x5 matrix of 64 bit lanes.
 pub type State = [[u64; 5]; 5];

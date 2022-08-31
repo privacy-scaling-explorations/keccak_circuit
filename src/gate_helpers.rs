@@ -1,4 +1,4 @@
-use eth_types::Field;
+use crate::common::Field;
 use num_bigint::BigUint;
 
 /// Convert a bigUint value to FieldExt

@@ -1,5 +1,5 @@
-use eth_types::Field;
-use gadgets::is_zero::{IsZeroChip, IsZeroConfig, IsZeroInstruction};
+use crate::common::Field;
+use crate::iszero::{IsZeroChip, IsZeroConfig, IsZeroInstruction};
 use halo2_proofs::{
     circuit::{AssignedCell, Layouter, Region},
     plonk::{Advice, Column, ConstraintSystem, Error, Expression, Selector},
